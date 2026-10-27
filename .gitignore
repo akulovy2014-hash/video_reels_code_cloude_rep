@@ -1,0 +1,5 @@
+voices/*.onnx
+voices/*.onnx.json
+voices/MODEL_CARD
+out/
+__pycache__/

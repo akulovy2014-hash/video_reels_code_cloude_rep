@@ -1,0 +1,18 @@
+{
+  "title": "Свой номер",
+  "caption": "Если тебе позвонят с твоего же номера... просто не бери трубку. #страшныеистории #хоррор #крипипаста #мистика #страшилки #ужасы #рилс",
+  "lines": [
+    {"text": "Никогда не бери трубку, если звонит твой собственный номер.", "scene": "phone", "figure": false, "scare": false},
+    {"text": "Мне позвонили ровно в три часа ночи. На экране был мой номер.", "scene": "phone", "figure": false, "scare": false},
+    {"text": "Я ответил. Сначала была тишина. А потом я услышал своё дыхание.", "scene": "room", "figure": false, "scare": false},
+    {"text": "Мой собственный голос прошептал: не оборачивайся. Он уже в комнате.", "scene": "room", "figure": true, "scare": false},
+    {"text": "Я засмеялся. Я живу один, и дверь заперта на два замка.", "scene": "door", "figure": false, "scare": false},
+    {"text": "И тут у меня за спиной скрипнула половица.", "scene": "corridor", "figure": true, "scare": true},
+    {"text": "Я не обернулся. Я бросился в ванную и закрылся изнутри.", "scene": "door", "figure": true, "scare": false},
+    {"text": "Телефон зазвонил снова. Опять мой номер.", "scene": "phone", "figure": false, "scare": false},
+    {"text": "Голос сказал: зря ты закрылся. Я ведь просил не оборачиваться.", "scene": "mirror", "figure": false, "scare": false},
+    {"text": "Я медленно поднял глаза на зеркало. Моё отражение улыбалось.", "scene": "mirror", "figure": true, "scare": true},
+    {"text": "А я не улыбался.", "scene": "mirror", "figure": false, "scare": false},
+    {"text": "Так что если тебе звонят с твоего номера... лучше не отвечай.", "scene": "window", "figure": true, "scare": false}
+  ]
+}
