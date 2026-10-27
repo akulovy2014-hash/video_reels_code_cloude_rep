@@ -1,0 +1,37 @@
+name: Daily horror reel
+
+on:
+  schedule:
+    - cron: "0 15 * * *"  # every day at 18:00 Moscow time
+  workflow_dispatch:
+    inputs:
+      theme:
+        description: "Тема истории (необязательно)"
+        required: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - run: pip install -r requirements.txt
+      - name: Make reel
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          THEME: ${{ github.event.inputs.theme }}
+        run: |
+          if [ -n "$THEME" ]; then
+            python make_reel.py --theme "$THEME"
+          else
+            python make_reel.py
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ github.run_number }}
+          path: out/
+          retention-days: 14
